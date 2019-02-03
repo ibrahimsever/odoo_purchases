@@ -16,6 +16,11 @@ Feature: Home Page
     And user click login button
     Then user should see inbox title
 
+    Scenario: create vendor as manager
+    Given user on purchases page
+    When when user on requests for quotation
+    Then page title should be displayed
+
 
 
 

@@ -1,14 +1,17 @@
 package com.longhorn.step_definitions;
 
+import com.longhorn.utilities.TestBase;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class PurchasesStepDefinitions {
+public class PurchasesStepDefinitions extends TestBase {
 
 
     @Given("domain address")
     public void domain_address() {
+
+
         // Write code here that turns the phrase above into concrete actions
         throw new cucumber.api.PendingException();
     }
@@ -61,7 +64,23 @@ public class PurchasesStepDefinitions {
         throw new cucumber.api.PendingException();
     }
 
+    @Given("user on purchases page")
+    public void user_on_purchases_page() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new cucumber.api.PendingException();
+    }
 
+    @When("when user on requests for quotation")
+    public void when_user_on_requests_for_quotation() {
+        // Write code here that turns the phrase above into concrete actions
+        throw new cucumber.api.PendingException();
+    }
+
+    @Then("page title should be displayed")
+    public void page_title_should_be_displayed() {
+
+        throw new cucumber.api.PendingException();
+    }
 
 
 }
