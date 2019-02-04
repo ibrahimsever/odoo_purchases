@@ -8,7 +8,10 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions (
 
-        features = "src/test/resources/features/purchases.feature"
+        features = "src/test/resources/features"
+        , glue = "com/longhorn/step_definitions"
+        ,dryRun = false
+        ,tags="@homePage,@loginPage"
 
 )
 
