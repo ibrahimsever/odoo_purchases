@@ -17,7 +17,7 @@ public class NegativeLoginTest extends TestBase {
         extentLogger.info("Verifying");
         Thread.sleep(3000);
 
-        assertEquals(pages.purchases().WrongCredentials.getText(), ApplicationConstants.WRONG_CREDENTIALS);
+        assertEquals(pages.purchases().wrongCredentials.getText(), ApplicationConstants.WRONG_CREDENTIALS);
         extentLogger.pass("Failed: wrong password");
 
     }
@@ -30,7 +30,7 @@ public class NegativeLoginTest extends TestBase {
         pages.login().login(ConfigurationReader.getProperty("wrongusername"), ConfigurationReader.getProperty("password"));
         extentLogger.info("Verifying");
         Thread.sleep(3000);
-        assertEquals(pages.purchases().WrongCredentials.getText(), ApplicationConstants.WRONG_CREDENTIALS);
+        assertEquals(pages.purchases().wrongCredentials.getText(), ApplicationConstants.WRONG_CREDENTIALS);
         extentLogger.pass("Failed: wrong username");
     }
 }

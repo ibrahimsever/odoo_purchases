@@ -34,15 +34,17 @@ public class Purchases {
 
 
     @FindBy(xpath = "//p[@class='alert alert-danger']")
-    public WebElement WrongCredentials;
+    public WebElement wrongCredentials;
 
 
     @FindBy(xpath = "//span[@class='oe_topbar_name']")
-    public WebElement NameOfPerson;
+    public WebElement nameOfPerson;
 
     @FindBy(linkText = "Log out")
     public WebElement logOutButton;
 
     @FindBy(partialLinkText = "Purchases")
     public WebElement purchaseMenu;
+
+
 }

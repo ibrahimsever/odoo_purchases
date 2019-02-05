@@ -9,4 +9,5 @@ public class ApplicationConstants {
     public static final String TITLE_INCOMING_PRODUCT = "Incoming Product - Odoo";
     public static final String TITLE_VENDOR_BILLS = "Vendor Bills - Odoo";
     public static final String WRONG_CREDENTIALS = "Wrong log in information";
+    public static final String TITLE_CREATE_RFQ="New";
 }

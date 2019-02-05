@@ -5,8 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Menu {
-    public Menu() {
+public class topMenu {
+    public topMenu() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 

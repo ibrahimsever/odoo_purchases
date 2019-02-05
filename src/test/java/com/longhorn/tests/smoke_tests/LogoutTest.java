@@ -1,5 +1,6 @@
 package com.longhorn.tests.smoke_tests;
 
+import com.longhorn.utilities.ApplicationConstants;
 import com.longhorn.utilities.ConfigurationReader;
 import com.longhorn.utilities.TestBase;
 import org.testng.Assert;
@@ -14,7 +15,7 @@ public class LogoutTest extends TestBase {
                 ConfigurationReader.getProperty("password"));
         Thread.sleep(6000);
         pages.purchases().purchaseMenu.click();
-        pages.purchases().NameOfPerson.click();
+        pages.purchases().nameOfPerson.click();
         pages.purchases().logOutButton.click();
         Assert.assertEquals(pages.choseRightOne().rightButton.getText(),"Log in");
         extentLogger.pass("Passed: Log out verified");
