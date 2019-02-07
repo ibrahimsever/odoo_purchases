@@ -14,10 +14,9 @@ public class PositiveLoginTest extends TestBase {
 
         extentLogger = report.createTest("Positive login test");
         extentLogger.info("Login to application");
-        pages.choseRightOne().rightButton.click();
-        pages.login().login(ConfigurationReader.getProperty("username"),
+        pages.loginPage().demoButton.click();
+        pages.loginPage().login(ConfigurationReader.getProperty("username"),
                 ConfigurationReader.getProperty("password"));
-//        pages.login().loginButton.click();
         Thread.sleep(5000);
         assertEquals(Driver.getDriver().getTitle(), ApplicationConstants.TITLE_OF_APPLICATION);
         extentLogger.pass("Passed: Right Credentials");

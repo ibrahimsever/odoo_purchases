@@ -1,42 +1,49 @@
 package com.longhorn.utilities;
 
-import com.longhorn.pages.DemoWebsite;
-import com.longhorn.pages.LoginPage;
-import com.longhorn.pages.Purchases;
-import com.longhorn.pages.RequestsForQuotation;
+import com.longhorn.pages.*;
 
 public class Pages {
-    private LoginPage loginPage;
-    private DemoWebsite demoWebsite;
-    private BrowserUtils browserUtils;
-    private Purchases purchases;
+    private HomeLoginPage homeLoginPage;
+    private TopMenu topMenu;
+    private LeftMenu leftMenu;
+    private RequestsForQuotation requestsForQuotation;
+    private PurchaseOrder purchaseOrder;
 
-    public BrowserUtils browserUtils(){
-        if(browserUtils==null){
-            browserUtils=new BrowserUtils();
+
+    public HomeLoginPage loginPage() {
+        if (homeLoginPage == null) {
+            homeLoginPage = new HomeLoginPage();
         }
-        return browserUtils;
+        return homeLoginPage;
     }
 
-    public LoginPage login() {
-        if (loginPage == null) {
-            loginPage = new LoginPage();
+
+    public TopMenu topMenu() {
+        if (topMenu == null) {
+            topMenu = new TopMenu();
         }
-        return loginPage;
+        return topMenu;
     }
 
-    public DemoWebsite choseRightOne() {
-        if (demoWebsite == null) {
-            demoWebsite = new DemoWebsite();
+    public LeftMenu leftMenu() {
+        if (leftMenu == null) {
+            leftMenu = new LeftMenu();
         }
-        return demoWebsite;
+        return leftMenu;
     }
 
-    public Purchases purchases() {
-        if (purchases == null) {
-            purchases = new Purchases();
+    public RequestsForQuotation requestsForQuotation() {
+        if (requestsForQuotation == null) {
+            requestsForQuotation = new RequestsForQuotation();
         }
-        return purchases;
+        return requestsForQuotation;
+    }
+
+    public PurchaseOrder purchaseOrder(){
+        if (purchaseOrder == null) {
+            purchaseOrder = new PurchaseOrder();
+        }
+        return purchaseOrder;
     }
 
 

@@ -6,8 +6,12 @@ public class ApplicationConstants {
     public static final String TITLE_PURCHASE_ORDER = "Purchase Orders - Odoo";
     public static final String TITLE_VENDOR  = "Vendors - Odoo";
     public static final String TITLE_PRODUCT = "Products - Odoo";
-    public static final String TITLE_INCOMING_PRODUCT = "Incoming Product - Odoo";
+    public static final String TITLE_INCOMING_PRODUCT = "Incoming Products - Odoo";
     public static final String TITLE_VENDOR_BILLS = "Vendor Bills - Odoo";
-    public static final String WRONG_CREDENTIALS = "Wrong log in information";
+    public static final String WRONG_CREDENTIALS = "Wrong login/password";
     public static final String TITLE_CREATE_RFQ="New";
+    public static final String TITLE_DEMO_LOGINPAGE="Login | Website localhost";
+
+
+
 }
