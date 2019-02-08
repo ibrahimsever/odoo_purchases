@@ -1,15 +1,14 @@
 package com.longhorn.tests.smoke_tests;
 
 import com.longhorn.utilities.*;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import sun.security.krb5.internal.PAData;
 
 import static org.testng.Assert.assertEquals;
 
 public class PageHeaderTest extends TestBase {
-    @Test(priority = 0)
+
+    @Test
     public void ApplicationTitleTest() throws InterruptedException {
         // create a new test / test case in the report and give name : Page headers test
         extentLogger = report.createTest("Application Title test");
@@ -21,7 +20,8 @@ public class PageHeaderTest extends TestBase {
         pages.loginPage().login(ConfigurationReader.getProperty("username"),
                 ConfigurationReader.getProperty("password"));
 
-        Thread.sleep(10000);
+
+        BrowserUtils.wait(8);
         extentLogger.info("Verifying page title of the Application");
         Assert.assertEquals(Driver.getDriver().getTitle(), ApplicationConstants.TITLE_OF_APPLICATION);
         Thread.sleep(10000);
@@ -37,7 +37,7 @@ public class PageHeaderTest extends TestBase {
     }
 
 
-    @Test(priority = 1)
+    @Test
     public void RequestsForQuotationTitleTest() throws InterruptedException {
         Thread.sleep(8000);
         extentLogger = report.createTest("Requests for Quotation Title Test");
@@ -57,11 +57,11 @@ public class PageHeaderTest extends TestBase {
 //        pages.leftMenu().linkRequestForQoutation.click();
 
         extentLogger.info("Verifying page title on Requests for Quotation");
-        Thread.sleep(6000);
+        BrowserUtils.wait(10);
         String actual=Driver.getDriver().getTitle();
         System.out.println(actual);
         assertEquals(actual, ApplicationConstants.TITLE_PURCHASE);
-        Thread.sleep(10000);
+        BrowserUtils.wait(8);
         pages.topMenu().nameOfUser.click();
         Thread.sleep(10000);
         pages.topMenu().logOut.click();
@@ -75,7 +75,7 @@ public class PageHeaderTest extends TestBase {
 
     }
 
-    @Test(priority = 2)
+    @Test
     public void PurchaseOrderTitleTest() throws InterruptedException {
         Thread.sleep(8000);
         extentLogger = report.createTest("Purchase Orders Title test");
@@ -86,17 +86,17 @@ public class PageHeaderTest extends TestBase {
                 ConfigurationReader.getProperty("password"));
 
         extentLogger.info("click on purchase link");
-        Thread.sleep(6000);
+        BrowserUtils.wait(10);
         pages.topMenu().purchaseLink.click();
         extentLogger.info("clicking purchase orders on left menu");
-        Thread.sleep(6000);
+
         pages.leftMenu().linkPurchaseOrders.click();
         extentLogger.info("Verifying page title on Purchase Order");
-
+        BrowserUtils.wait(10);
         String actual=Driver.getDriver().getTitle();
-        System.out.println(actual);
+        BrowserUtils.wait(10);
         assertEquals(actual, ApplicationConstants.TITLE_PURCHASE_ORDER );
-        Thread.sleep(10000);
+        BrowserUtils.wait(10);
         pages.topMenu().nameOfUser.click();
         Thread.sleep(10000);
         pages.topMenu().logOut.click();
@@ -106,7 +106,7 @@ public class PageHeaderTest extends TestBase {
 
     }
 
-    @Test(priority = 3)
+    @Test
     public void VendorTitleTest() throws InterruptedException {
         Thread.sleep(8000);
         extentLogger = report.createTest("Vendor Title test");
@@ -119,26 +119,25 @@ public class PageHeaderTest extends TestBase {
                 ConfigurationReader.getProperty("password"));
 
         extentLogger.info("click on purchase link");
-        Thread.sleep(6000);
+        BrowserUtils.wait(10);
         pages.topMenu().purchaseLink.click();
         extentLogger.info("clicking vender on left menu");
-        Thread.sleep(6000);
+        BrowserUtils.wait(10);
         pages.leftMenu().linkVendors.click();
-
+        BrowserUtils.wait(10);
         String actual=Driver.getDriver().getTitle();
-        System.out.println(actual);
+        BrowserUtils.wait(10);
         assertEquals(actual, ApplicationConstants.TITLE_VENDOR );
-        Thread.sleep(10000);
         pages.topMenu().nameOfUser.click();
         Thread.sleep(10000);
         pages.topMenu().logOut.click();
         Driver.closeDriver();
-        Thread.sleep(5000);
+        BrowserUtils.wait(10);
         extentLogger.pass("Pass : Page headers for Ventor Title test");
 
     }
 
-    @Test(priority = 4)
+    @Test
     public void ProductTitleTest() throws InterruptedException {
         Thread.sleep(8000);
         extentLogger = report.createTest("Product Title test");
@@ -150,25 +149,25 @@ public class PageHeaderTest extends TestBase {
                 ConfigurationReader.getProperty("password"));
 
         extentLogger.info("click on purchase link");
-        Thread.sleep(6000);
+        BrowserUtils.wait(10);
         pages.topMenu().purchaseLink.click();
         extentLogger.info("clicking product on left menu");
-        Thread.sleep(6000);
-        pages.leftMenu().linkIncomingProducts.click();
-
+        BrowserUtils.wait(10);
+        pages.leftMenu().linkProducts.click();
+        BrowserUtils.wait(10);
         String actual=Driver.getDriver().getTitle();
         System.out.println(actual);
+        BrowserUtils.wait(10);
         assertEquals(actual, ApplicationConstants.TITLE_PRODUCT );
-        Thread.sleep(10000);
         pages.topMenu().nameOfUser.click();
         Thread.sleep(10000);
         pages.topMenu().logOut.click();
-        Driver.closeDriver();Thread.sleep(5000);
+        Driver.closeDriver();
         extentLogger.pass("Pass : Page headers for Product Title test");
 
     }
 
-    @Test (priority = 6)
+    @Test
     public void IncomingProductTitleTest() throws InterruptedException {
         Thread.sleep(8000);
         extentLogger = report.createTest("Incoming Product Title test");
@@ -180,26 +179,26 @@ public class PageHeaderTest extends TestBase {
                 ConfigurationReader.getProperty("password"));
 
         extentLogger.info("click on purchase link");
-        Thread.sleep(6000);
+        BrowserUtils.wait(10);
         pages.topMenu().purchaseLink.click();
         extentLogger.info("clicking incoming product on left menu");
-        Thread.sleep(6000);
+        BrowserUtils.wait(10);
         pages.leftMenu().linkIncomingProducts.click();
+        BrowserUtils.wait(10);
         String actual=Driver.getDriver().getTitle();
         System.out.println(actual);
+        BrowserUtils.wait(10);
         assertEquals(actual, ApplicationConstants.TITLE_INCOMING_PRODUCT );
-        Thread.sleep(10000);
         pages.topMenu().nameOfUser.click();
         Thread.sleep(10000);
         pages.topMenu().logOut.click();
         Driver.closeDriver();
-        Thread.sleep(5000);
         extentLogger.pass("Pass : Page headers for Incoming Product Title test");
 
     }
 
 
-    @Test (priority = 5)
+    @Test
     public void VendorBillTitleTest() throws InterruptedException {
         Thread.sleep(8000);
         extentLogger = report.createTest("Vendor Title test");
@@ -211,20 +210,18 @@ public class PageHeaderTest extends TestBase {
                 ConfigurationReader.getProperty("password"));
 
         extentLogger.info("click on purchase link");
-        Thread.sleep(6000);
+        BrowserUtils.wait(10);
         pages.topMenu().purchaseLink.click();
         extentLogger.info("clicking vendor bill on left menu");
-        Thread.sleep(6000);
+        BrowserUtils.wait(10);
         pages.leftMenu().linkVendorBills.click();
+        BrowserUtils.wait(10);
         String actual=Driver.getDriver().getTitle();
-        System.out.println(actual);
         assertEquals(actual, ApplicationConstants.TITLE_VENDOR_BILLS );
-        Thread.sleep(10000);
         pages.topMenu().nameOfUser.click();
         Thread.sleep(10000);
         pages.topMenu().logOut.click();
         Driver.closeDriver();
-        Thread.sleep(5000);
         extentLogger.pass("Pass : Page headers for Ventor Title test");
 
     }
