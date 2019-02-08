@@ -36,7 +36,7 @@ public class Vendor {
     @FindBy(xpath = "(//ul[@class='dropdown-menu o_filters_menu'])//li[17]/a")
     public WebElement archivedButton_Vendor;
 
-    @FindBy(xpath = "//input[@class='o_field_char o_field_widget o_input o_required_modifier'")
+    @FindBy(xpath = "//input[@class='o_field_char o_field_widget o_input o_required_modifier']")
     public WebElement nameVandor;
 
     @FindBy(xpath = "//button[@class='btn btn-primary btn-sm o-kanban-button-new']")

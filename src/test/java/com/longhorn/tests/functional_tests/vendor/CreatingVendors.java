@@ -1,4 +1,4 @@
-package com.longhorn.tests.smoke_tests.functional_tests.Vendors;
+package com.longhorn.tests.functional_tests.vendor;
 
 import com.longhorn.utilities.BrowserUtils;
 import com.longhorn.utilities.ConfigurationReader;
