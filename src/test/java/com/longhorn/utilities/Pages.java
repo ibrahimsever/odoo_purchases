@@ -8,6 +8,15 @@ public class Pages {
     private LeftMenu leftMenu;
     private RequestsForQuotation requestsForQuotation;
     private PurchaseOrder purchaseOrder;
+    private Vendor vendor;
+
+    public Vendor vendor() {
+        if (vendor==null){
+            vendor=new Vendor();
+        }
+        return vendor;
+    }
+
 
 
     public HomeLoginPage loginPage() {
@@ -45,6 +54,8 @@ public class Pages {
         }
         return purchaseOrder;
     }
+
+
 
 
 }
