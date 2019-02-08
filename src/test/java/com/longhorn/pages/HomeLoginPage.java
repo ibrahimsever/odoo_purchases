@@ -57,8 +57,7 @@ public class HomeLoginPage {
         }
 
         public void singInAgain(){
-                signInButtonAgain.click();
-                selectLoginOption.click();
+                demoButton.click();
                 demoButton.click();
                 login(ConfigurationReader.getProperty("username"),
                         ConfigurationReader.getProperty("password"));

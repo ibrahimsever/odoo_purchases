@@ -27,6 +27,27 @@ public class RequestsForQuotation {
     @FindBy(xpath = "(//div[@class='btn-group']//ul)[2]//li)[1]")
     public WebElement export;
 
+
+    @FindBy(xpath = "//button[@class='btn btn-primary btn-sm o_list_button_add']")
+    public WebElement createRfQ;
+
+    @FindBy(xpath = "//button[@class='btn btn-primary btn-sm o_form_button_save']")
+    public WebElement saveRfQ;
+
+    @FindBy(css = "h1")
+    public WebElement titleCreateRFQ;
+
+    @FindBy(id = "o_field_input_255")
+    public WebElement selectVendor;
+
+    @FindBy(partialLinkText = "Deliveries & Invoices")
+    public WebElement deliveriesInvoices;
+
+    @FindBy(id = "o_field_input_34")
+    public WebElement selectShheduleDate;
+
+
+
     public WebElement Quote(int num)
     {
         Driver.getDriver().findElement(By.xpath("//table//tbody//tr["+num+"]//td[1]")).click();
