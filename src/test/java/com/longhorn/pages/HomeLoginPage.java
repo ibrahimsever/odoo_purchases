@@ -16,6 +16,7 @@ public class HomeLoginPage {
         @FindBy(linkText = "home")
         public WebElement homeButton;
 
+        //1
         @FindBy(xpath = "(//a[@class='list-group-item'])[2]")
         public WebElement demoButton;
 
