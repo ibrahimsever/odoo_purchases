@@ -62,7 +62,6 @@ public class FileImportTest extends TestBase {
 
         WebElement message=Driver.getDriver().findElement(By.xpath("//div[@class='oe_import_with_file oe_padding col-sm-12']/h2"));
         //WebElement message=Driver.getDriver().findElement(By.linkText("Map your columns to import"));
-
         BrowserUtils.wait(10);
         String messageText=message.getText();
         System.out.println("message"+message);

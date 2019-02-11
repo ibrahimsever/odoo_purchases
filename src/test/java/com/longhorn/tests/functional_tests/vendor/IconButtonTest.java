@@ -44,11 +44,5 @@ public class IconButtonTest extends TestBase {
 
     }
 
-//    @Test
-//    public void dublicateNameCheck(){
-//
-//
-//
-//    }
 
 }
