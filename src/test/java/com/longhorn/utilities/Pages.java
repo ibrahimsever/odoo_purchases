@@ -10,6 +10,14 @@ public class Pages {
     private PurchaseOrder purchaseOrder;
     private Vendor vendor;
 
+
+    public HomeLoginPage loginPage() {
+        if (homeLoginPage == null) {
+            homeLoginPage = new HomeLoginPage();
+        }
+        return homeLoginPage;
+    }
+
     public Vendor vendor() {
         if (vendor==null){
             vendor=new Vendor();
@@ -19,12 +27,6 @@ public class Pages {
 
 
 
-    public HomeLoginPage loginPage() {
-        if (homeLoginPage == null) {
-            homeLoginPage = new HomeLoginPage();
-        }
-        return homeLoginPage;
-    }
 
 
     public TopMenu topMenu() {

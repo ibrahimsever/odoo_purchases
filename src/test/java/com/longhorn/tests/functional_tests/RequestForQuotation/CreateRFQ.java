@@ -28,7 +28,7 @@ public class CreateRFQ extends TestBase {
         pages.topMenu().purchaseLink.click();
 
         BrowserUtils.wait(9);
-        extentLogger.info("cliking create button");
+
         pages.requestsForQuotation().createRfQ.click();
         String actual=pages.requestsForQuotation().titleCreateRFQ.getText();
         System.out.println("actual create RFQ Title = " + actual);
