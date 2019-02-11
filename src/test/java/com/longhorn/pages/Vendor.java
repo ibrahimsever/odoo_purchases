@@ -1,9 +1,12 @@
 package com.longhorn.pages;
 
+import com.longhorn.utilities.ConfigurationReader;
 import com.longhorn.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import java.util.List;
 
 public class Vendor {
     public Vendor(){
@@ -14,7 +17,7 @@ public class Vendor {
     public WebElement createButton_Vendor;
 
     @FindBy(xpath = "//input[@class='o_searchview_input']")
-    public WebElement search_Vendor;
+    public WebElement searchTab_Vendor;
 
     @FindBy(xpath = "//input[@class='o_searchview_input']")
     public WebElement listIcon_Vendor;
@@ -24,13 +27,11 @@ public class Vendor {
 
     @FindBy(xpath = "//label[@class='btn btn-primary']")
     public WebElement loadButton_Vendor;
-
-
+    
     @FindBy(xpath = "//div[@class='o_stat_info o_field_widget']/span[@class='o_stat_text o_not_hover text-success']")
     public WebElement archiveButton_Vendor;
-
-
     @FindBy(xpath = "(//button[@class='o_dropdown_toggler_btn btn btn-sm dropdown-toggle'])[1]")
+   
     public WebElement filterButton_Vendor;
 
     @FindBy(xpath = "(//ul[@class='dropdown-menu o_filters_menu'])//li[17]/a")
@@ -48,8 +49,23 @@ public class Vendor {
     @FindBy(xpath = "(//button[@class='btn btn-sm btn-primary'])[1]")
     public WebElement saveAndClose;
 
+    @FindBy(xpath = "//div/button[@class='btn btn-primary btn-sm o_form_button_save']")
+    public WebElement save;
 
+    @FindBy(xpath = "//div[@class='o_thread_message_content']")
+    public WebElement vendorCreatedMessage;
 
+    @FindBy(xpath = "//div[@class='o_kanban_view o_res_partner_kanban o_kanban_ungrouped']")
+    public WebElement listOfAllVendors;
 
+    @FindBy(xpath = "((//div[@class='oe_kanban_details']//strong)/span)")
+    public List<WebElement> vendorNameListElements;
+
+    @FindBy(xpath = "//label[@class='btn btn-primary']")
+    public WebElement loadFile;
+
+    
+ 
+    
 
 }
